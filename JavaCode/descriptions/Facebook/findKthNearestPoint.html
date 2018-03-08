@@ -1,0 +1,15 @@
+<section>
+    <h1>Nearest Kth</h1>
+    <p>Use quickSelect to find the kth nearest point to the origin point
+        <br>
+        'Time complexity: average O(n), worst O(n^2) when always pick the most
+        right one -- the time complexity of quick select'</p>
+    <p>Use max Heap
+        maintain a max heap with size K,
+        every time meet a new point, check if its distance is
+        smaller than the heap.peek()
+        if yes, pop out the peek, push this point into heap
+        in the end we will have K points which are the nearest points
+        <br>
+        'Time complexity: O(nlgk), space complexity:O(k)'</p>
+</section>

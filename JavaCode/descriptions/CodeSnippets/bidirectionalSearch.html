@@ -1,0 +1,21 @@
+<p>Bidirectional search is a graph search algorithm which find smallest path form source to goal vertex.
+    It runs two simultaneous search – </p>
+
+<ol>
+    <li>Forward search form source/initial vertex toward goal vertex</li>
+    <li>Backward search form goal/target vertex toward source vertex</li>
+</ol>
+
+<p>Bidirectional search replaces single search graph(which is likely to grow exponentially)
+    with two smaller sub graphs – one starting from initial vertex and other starting from goal vertex.
+    <strong>The search terminates when two graphs intersect.</strong></p>
+
+<p align="center"><strong>Why bidirectional approach?</strong></p>
+
+<p>"In traditional breadth-first search, we would search up to k nodes in the first "level" of the search.
+    In the second level, we would search up to k nodes for each of those first k nodes,
+    so k^2 nodes total (thus far). We would do this d times, so that's O(k^d) nodes.</p>
+
+<p>"In bidirectional search, we have two searches that collide after approximately d/2 levels
+    ( the midpoint of the path). The search from s visits approximately k^(d/2), as does the search from t.
+    That's approximately 2k^(d/2), or O(k^(d/2)), nodes total."</p>
